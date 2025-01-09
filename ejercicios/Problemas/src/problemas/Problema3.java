@@ -38,6 +38,8 @@ public class Problema3 {
         nota4 = entrada.nextDouble();
 
         mensaje = obtenerPromediosCualitativos(nota1, nota2, nota3, nota4);
+        mensaje = String.format("El promedio de las notas: %.2f, %.2f, %.2f, %"
+                + ".2f es %s", nota1, nota2, nota3, nota4, mensaje);
         mensaje = mayusculas(mensaje);
 
         System.out.printf("%s", mensaje);
@@ -66,9 +68,8 @@ public class Problema3 {
 
             }
         }
-        mensaje = String.format("El promedio de las notas: %.2f, %.2f, %.2f, %"
-                + ".2f es %s", a, b, c, d, cualitativo);
-        return mensaje;
+        
+        return cualitativo;
     }
 
     public static String mayusculas(String a) {
